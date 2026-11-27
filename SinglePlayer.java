@@ -9,23 +9,15 @@ public class SinglePlayer extends Game
 {
     private int hoursToFinish;
 
-    /**
-     * Constructor for objects of class SinglePlayer
-     */
-    public SinglePlayer()
+    public SinglePlayer(String author, Platform platform, Genre genre, AgeRating ageRating, String gameTitle, int hoursToFinish)
     {
-        // initialise instance variables
-        
+        super(author, platform, genre, ageRating, gameTitle);
+        this.hoursToFinish = hoursToFinish;
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public void sampleMethod()
+    public String getGameDetails()
     {
-        
+        return super.getGameDetails()
+        + " | Hours to finish: " + hoursToFinish;
     }
 }
